@@ -19,6 +19,9 @@ int chk;
 float hum;  //Stores humidity value
 float temp; //Stores temperature value
 
+unsigned long previousMillis = 0;
+const long interval = 2000;
+
 void setup()
 {
   pinMode(LED_PIN, OUTPUT);
@@ -31,8 +34,7 @@ void loop()
 {
   //lê estado do sensor flex e armazena na variável 
   int flexSensorReading = analogRead(flexSensorPin); 
-  Serial.println(flexSensorReading);
-
+  
   //O sensor varia de 10 a 1 mais ou menos, ao flexionar até o valor chegar a 4 acende o led
   if(flexSensorReading<=4){
     digitalWrite(LED_PIN, HIGH);
@@ -52,12 +54,16 @@ void loop()
     tone(speakerPin, 10, 50); 
   }
   
-  //Mostra valores medidos pelo sensor de umidade e temperatura
-    Serial.print("Humidity: ");
-    Serial.print(hum);
-    Serial.print(" %, Temp: ");
-    Serial.print(temp);
-    Serial.println(" Celsius");
-    delay(2000); 
+  //Mostra valores medidos pelo sensor de umidade, temperatura e do flex sensor
+    unsigned long currentMillis = millis();
+    if (currentMillis - previousMillis >= interval){
+      previousMillis = currentMillis;
+      Serial.print("Humidity: ");
+      Serial.print(hum);
+      Serial.print(" %, Temp: ");
+      Serial.print(temp);
+      Serial.println(" Celsius");
+      Serial.println(flexSensorReading);
+    }
 }
 
