@@ -7,4 +7,5 @@ Disciplina Software Embarcado - Mestrado UERJ
   <li>Tarefa-03 (OK)</li>
   <li>Tarefa-04 (OK)</li>
   <li>Tarefa-05 (OK)</li>
+  <li>Tarefa-06 (OK)</li>
 </ul>
