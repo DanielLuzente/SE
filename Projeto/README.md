@@ -10,9 +10,9 @@ decisões de atuação caso as condições pré-definidas sejam satisfeitas.
 
 ## Componentes do sistema
 
-**Sensores** - AM2302 (Temperatura e umidade) e Flex Sensor (Flexão e Deflexão)
+**Sensores** - Botões, AM2302 (Temperatura e umidade), Flex Sensor (Flexão e Deflexão) e PIR Sensor (Movimento)
 
-**Atuadores** - Led e Speaker
+**Atuadores** - Leds e Speaker
 
 ## Comunicação via Rádio Frequência
 
