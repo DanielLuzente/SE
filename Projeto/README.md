@@ -12,7 +12,7 @@ decisões de atuação caso as condições pré-definidas sejam satisfeitas.
 
 **Sensores** - Botões, AM2302 (Temperatura e umidade), Flex Sensor (Flexão e Deflexão) e PIR Sensor (Movimento)
 
-**Atuadores** - Leds e Speaker
+**Atuadores** - Leds, relé e Speaker
 
 ## Comunicação via Rádio Frequência
 
